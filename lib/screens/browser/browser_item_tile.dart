@@ -68,7 +68,7 @@ class BrowserItemTile extends ConsumerWidget {
   void _showDownloadAction(BuildContext context, WidgetRef ref) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => CupertinoActionSheet(
+      builder: (context) => const CupertinoActionSheet(
         title: Text('Download \$item.name?'),
         actions: [
           CupertinoActionSheetAction(

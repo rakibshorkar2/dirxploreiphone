@@ -57,7 +57,7 @@ class BrowserScreen extends ConsumerWidget {
                   );
                 },
                 loading: () => const Center(child: CupertinoActivityIndicator()),
-                error: (err, stack) => Center(
+                error: (err, stack) => const Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
