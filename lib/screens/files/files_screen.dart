@@ -85,8 +85,8 @@ class FilesScreen extends ConsumerWidget {
     final controller = TextEditingController();
     showCupertinoDialog(
       context: context,
-      builder: (context) => const CupertinoAlertDialog(
-        title: Text('New Folder'),
+      builder: (context) => CupertinoAlertDialog(
+        title: const Text('New Folder'),
         content: Padding(
           padding: const EdgeInsets.only(top: 12.0),
           child: CupertinoTextField(controller: controller, placeholder: 'Folder Name'),

@@ -126,8 +126,8 @@ class SettingsScreen extends ConsumerWidget {
     final themes = ['dark', 'light'];
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => const CupertinoActionSheet(
-        title: Text('Select Theme'),
+      builder: (context) => CupertinoActionSheet(
+        title: const Text('Select Theme'),
         actions: themes.map((t) => CupertinoActionSheetAction(
           onPressed: () {
             ref.read(settingsProvider.notifier).updateSettings(settings.copyWith(themeMode: t));

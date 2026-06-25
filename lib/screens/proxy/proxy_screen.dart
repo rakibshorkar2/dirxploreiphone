@@ -85,14 +85,14 @@ class ProxyScreen extends ConsumerWidget {
   void _showForm(BuildContext context, {ProxyConfig? proxy}) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => const ProxyFormSheet(initialProxy: proxy),
+      builder: (context) => ProxyFormSheet(initialProxy: proxy),
     );
   }
 
   void _showActions(BuildContext context, WidgetRef ref, ProxyConfig proxy) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => const CupertinoActionSheet(
+      builder: (context) => CupertinoActionSheet(
         actions: [
           CupertinoActionSheetAction(
             onPressed: () {

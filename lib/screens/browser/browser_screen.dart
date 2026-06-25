@@ -57,13 +57,13 @@ class BrowserScreen extends ConsumerWidget {
                   );
                 },
                 loading: () => const Center(child: CupertinoActivityIndicator()),
-                error: (err, stack) => const Center(
+                error: (err, stack) => Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(CupertinoIcons.exclamationmark_triangle, color: CupertinoColors.systemRed, size: 48),
                       const SizedBox(height: 16),
-                      Text('Error: \$err', textAlign: TextAlign.center),
+                      Text('Error: $err', textAlign: TextAlign.center),
                       CupertinoButton(
                         onPressed: () => ref.invalidate(directoryItemsProvider),
                         child: const Text('Retry'),
