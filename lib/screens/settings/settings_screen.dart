@@ -21,14 +21,14 @@ class SettingsScreen extends ConsumerWidget {
             _buildSectionHeader('DOWNLOADS'),
             _buildSettingsItem(
               'Concurrent Downloads',
-              trailing: Text('\${settings.concurrentDownloads}', style: const TextStyle(color: Color(0x99FFFFFF))),
+              trailing: Text('${settings.concurrentDownloads}', style: const TextStyle(color: Color(0x99FFFFFF))),
               onTap: () => _showPicker(context, ref, 'Concurrent Downloads', 1, 10, settings.concurrentDownloads, (val) {
                 ref.read(settingsProvider.notifier).updateSettings(settings.copyWith(concurrentDownloads: val));
               }),
             ),
             _buildSettingsItem(
               'Max Retries',
-              trailing: Text('\${settings.retryCount}', style: const TextStyle(color: Color(0x99FFFFFF))),
+              trailing: Text('${settings.retryCount}', style: const TextStyle(color: Color(0x99FFFFFF))),
               onTap: () => _showPicker(context, ref, 'Max Retries', 0, 20, settings.retryCount, (val) {
                 ref.read(settingsProvider.notifier).updateSettings(settings.copyWith(retryCount: val));
               }),

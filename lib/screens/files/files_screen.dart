@@ -94,13 +94,13 @@ class FilesScreen extends ConsumerWidget {
         actions: [
           CupertinoDialogAction(child: const Text('Cancel'), onPressed: () => Navigator.pop(context)),
           CupertinoDialogAction(
-            child: const Text('Create'),
             onPressed: () {
               if (controller.text.isNotEmpty) {
                 ref.read(fileOperationsProvider).createFolder(controller.text);
               }
               Navigator.pop(context);
             },
+            child: const Text('Create'),
           ),
         ],
       ),

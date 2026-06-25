@@ -65,8 +65,8 @@ class BrowserScreen extends ConsumerWidget {
                       const SizedBox(height: 16),
                       Text('Error: \$err', textAlign: TextAlign.center),
                       CupertinoButton(
-                        child: const Text('Retry'),
                         onPressed: () => ref.invalidate(directoryItemsProvider),
+                        child: const Text('Retry'),
                       )
                     ],
                   ),
