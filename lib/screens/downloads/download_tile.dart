@@ -50,7 +50,7 @@ class DownloadTile extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '\${(task.progress * 100).toStringAsFixed(1)}% • \$speedStr',
+                '${(task.progress * 100).toStringAsFixed(1)}% • $speedStr',
                 style: const TextStyle(fontSize: 12, color: Color(0x99FFFFFF)),
               ),
               Text(
@@ -62,7 +62,7 @@ class DownloadTile extends ConsumerWidget {
           if (task.eta.isNotEmpty)
             Padding(
               padding: const EdgeInsets.only(top: 4.0),
-              child: Text('ETA: \${task.eta}', style: const TextStyle(fontSize: 12, color: Color(0x66FFFFFF))),
+              child: Text('ETA: ${task.eta}', style: const TextStyle(fontSize: 12, color: Color(0x66FFFFFF))),
             ),
         ],
       ),

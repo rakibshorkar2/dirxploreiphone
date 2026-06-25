@@ -45,7 +45,7 @@ class BrowserItemTile extends ConsumerWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '\$sizeStr \${sizeStr.isNotEmpty && dateStr.isNotEmpty ? "•" : ""} \$dateStr',
+                    '${sizeStr.isNotEmpty ? sizeStr : (item.isDirectory ? "Folder" : "")}${sizeStr.isNotEmpty && dateStr.isNotEmpty ? " • " : ""}$dateStr',
                     style: const TextStyle(fontSize: 12, color: Color(0x99FFFFFF)),
                   ),
                 ],

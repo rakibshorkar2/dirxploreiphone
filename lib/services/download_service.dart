@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 import '../core/constants/app_constants.dart';
-import '../models/download_task.dart';
 
 class DownloadService {
   final MethodChannel _channel = const MethodChannel(AppConstants.downloadsChannel);
@@ -17,8 +16,7 @@ class DownloadService {
         'url': url,
         'filename': filename,
       });
-    } on PlatformException catch (e) {
-      print("Failed to start download: \${e.message}");
+    } on PlatformException catch (_) {
       rethrow;
     }
   }
