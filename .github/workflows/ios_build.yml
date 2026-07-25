@@ -37,6 +37,6 @@ jobs:
       - name: Flutter Analyze
         run: flutter analyze
 
-      - name: Build iOS IPA (No Codesign)
+      - name: Build iOS Frameworks / Build test
         run: |
           flutter build ios --no-codesign
